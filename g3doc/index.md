@@ -132,7 +132,7 @@ override func viewDidAppear(_ animated: Bool) {
   super.viewDidAppear(animated)
 
   getCurrentUserContactsAvatars() { avatars, error in
-    if (error) {
+    if let error = error {
       showErrorAlert(error)
     } else {
       updateAvatars(avatars)
